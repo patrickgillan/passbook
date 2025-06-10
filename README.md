@@ -4,7 +4,7 @@ This fork is updated to use the cryptography library for easy install on windows
 ## Installing this fork
 You can install this fork like this:
 ```
-pip install git+https://github.com/shivaRamdeen/passbook.git
+pip install git+https://github.com/patrickgillan/passbook.git
 ```
 
 # Passbook
