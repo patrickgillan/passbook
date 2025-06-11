@@ -345,9 +345,11 @@ class Pass(object):
         """
         Creates the hashes for all the files included in the pass file.
         """
-        self._hashes["pass.json"] = hashlib.sha1(pass_json.encode("utf-8")).hexdigest()
+        self._hashes["pass.json"] = hashlib.sha256(
+            pass_json.encode("utf-8")
+        ).hexdigest()
         for filename, filedata in self._files.items():
-            self._hashes[filename] = hashlib.sha1(filedata).hexdigest()
+            self._hashes[filename] = hashlib.sha256(filedata).hexdigest()
         return json.dumps(self._hashes)
 
     # def _get_smime(self, certificate, key, wwdr_certificate, password):
